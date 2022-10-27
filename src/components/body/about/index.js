@@ -6,9 +6,11 @@ function About() {
     <div className="about">
       <div className="about-top">
         <div className="about-info">
-          Hello, I'm
-         <br /> <span className="info-name">Larry Lai</span>.
-         <br /> Interested in Web3/HFT/Finance/Sports
+          Welcome, I'm
+         <br /> <span className="info-name">Larry Lai</span>.<br />
+         <p> Interested in HFT/Crypto/Finance</p>
+         <p> Am Quant/Dev/Student/Basketball enthusiast</p>
+         <p> Currently learning Mit6s081/CS144/CMU15213/CMU15445/Solidity</p>
         </div>
         <div className="about-photo">
           <img 
@@ -17,7 +19,7 @@ function About() {
           />
         </div>
       </div>
-      <SocialContact />
+      {/* <SocialContact /> */}
     </div>
   );
 }
