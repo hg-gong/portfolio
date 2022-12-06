@@ -1,11 +1,28 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+function Clock() {
+  // Get the current time
+  const date = new Date();
+  const hours = date.getHours();
+  const minutes = date.getMinutes();
+  const seconds = date.getSeconds();
+
+  // Return a div element containing the time
+  return (
+    <div>
+      The current time is {hours}:{minutes}:{seconds}
+    </div>
+  );
+}
+
+
 function App() {
   return (
     <div>
       <h1>Welcome to Larry's personal website!</h1>
       <p>This is the landing page for Larry's personal website. Here, you can learn more about Larry and see some of his work.</p>
+      <Clock />
     </div>
   );
 }
@@ -50,6 +67,8 @@ function Contact() {
     </div>
   );
 }
+
+
 
 // Render the About, Projects, and Contact components
 ReactDOM.render(
