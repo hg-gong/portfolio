@@ -1,28 +1,38 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-function Clock() {
-  // Get the current time
-  const date = new Date();
-  const hours = date.getHours();
-  const minutes = date.getMinutes();
-  const seconds = date.getSeconds();
 
-  // Return a div element containing the time
+function Clock() {
+  // Use the React.useState() hook to create a state variable for the current time
+  const [time, setTime] = React.useState(new Date());
+
+  // Use the React.useEffect() hook to update the time every second
+  React.useEffect(() => {
+    const interval = setInterval(() => {
+      setTime(new Date());
+    }, 1000);
+
+    // Clean up the interval when the component unmounts
+    return () => clearInterval(interval);
+  }, []);
+
+  // Format the time as a string
+  const timeString = time.toLocaleTimeString();
+
+  // Return the div element containing the clock
   return (
     <div>
-      The current time is {hours}:{minutes}:{seconds}
+      {timeString}
     </div>
   );
 }
-
 
 function App() {
   return (
     <div>
       <h1>Welcome to Larry's personal website!</h1>
-      <p>This is the landing page for Larry's personal website. Here, you can learn more about Larry and see some of his work.</p>
       <Clock />
+      <p>This is the landing page for Larry's personal website. Here, you can learn more about Larry and see some of his work.</p>
     </div>
   );
 }
