@@ -60,6 +60,8 @@ function Projects() {
         <li><a href="https://github.com/hg-gong/">CS144 TinyTCP</a></li>
         <li><a href="https://github.com/hg-gong/">Mit6s081 XV6 Operating System</a></li>
         <li><a href="https://github.com/hg-gong/">Cpp Trading System</a></li>
+        <li><a href="https://github.com/hg-gong/">Crypto Quantitative Trading</a></li>
+        <li><a href="https://github.com/hg-gong/">Dex Snipe Bot</a></li>
       </ul>
     </div>
   );
