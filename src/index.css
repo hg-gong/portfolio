@@ -1,0 +1,46 @@
+body {
+    background-color: var(--vscode-editor-background);
+    color: var(--vscode-editor-foreground);
+  }
+  
+  a {
+    color: var(--vscode-textLink-foreground);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--vscode-editor-foreground);
+  }
+  
+  p {
+    color: var(--vscode-editor-foreground);
+  }
+  
+  code {
+    color: var(--vscode-editor-foreground);
+  }
+  
+  pre {
+    background-color: var(--vscode-editor-background);
+    color: var(--vscode-editor-foreground);
+  }
+
+  body {
+    background-color: #000000;
+    color: #ffffff;
+  }
+
+  a {
+    color: #00ff00;
+  }
+
+  /* Add a new background style here */
+  body::before {
+    content: "";
+    background-image: url("https://source.unsplash.com/collection/502936/1600x900");
+    position: fixed;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    filter: blur(8px);
+  }
+  

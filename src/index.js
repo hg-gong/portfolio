@@ -1,34 +1,35 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Clock from './Clock';
-import About from './About';
-import Projects from './Projects';
-import Contact from './Contact';
-import Navbar from './Navbar';
-import EthPrice from './EthPrice';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import './index.css';
+import App from './App';
+import { CssBaseline } from '@material-ui/core';
+import { ThemeProvider, createTheme } from '@material-ui/core/styles';
 
+// const theme = createTheme({
+//   palette: {
+//     primary: {
+//       main: '#3f51b5',
+//     },
+//     secondary: {
+//       main: '#f50057',
+//     },
+//     background: {
+//       default: '#fff',
+//     },
+//   },
+// });
 
-function App() {
-  return (
-    <div>
-      <h1>Welcome to Larry's personal website!</h1>
-      <Clock />
-      <EthPrice />
-      <p>This is the landing page for Larry's personal website. Here, you can learn more about Larry and see some of his work.</p>
-    </div>
-  );
-}
+// ReactDOM.render(
+//   <React.StrictMode>
+//     <ThemeProvider theme={theme}>
+//       <CssBaseline />
+//       <App />
+//     </ThemeProvider>
+//   </React.StrictMode>,
+//   document.getElementById('root')
+// );
 
-
-// Render the About, Projects, and Contact components
 ReactDOM.render(
-  <>
-    <App />
-    <About />
-    <Projects />
-    <Contact />
-  </>,
+  <App />,
   document.getElementById('root')
 );
-
